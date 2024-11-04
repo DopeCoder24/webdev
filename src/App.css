@@ -83,3 +83,21 @@
   padding: 8px 15px;
   border-radius: 5px;
 }
+.earbuds {
+  text-align: center;
+  width: 300px;
+  height: 500px;
+}
+.earbuds .price {
+  font-size: 20px;
+}
+.earbuds button:first-of-type {
+  margin: 5px;
+
+  background-color: black;
+  color: white;
+}
+.earbuds button {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
