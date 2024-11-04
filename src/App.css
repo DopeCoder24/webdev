@@ -71,6 +71,7 @@
   justify-content: space-around;
   font-size: small;
   position: relative;
+  margin-bottom: 20px;
 }
 .tabBox img {
   width: 200px;
