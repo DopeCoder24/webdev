@@ -101,3 +101,26 @@
   padding: 10px 20px;
   border-radius: 10px;
 }
+.smarttv {
+  text-align: center;
+  width: 300px;
+  height: 500px;
+  position: relative;
+}
+.smarttv p {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 128, 0, 0.5);
+  color: rgb(255, 128, 0);
+}
+.smarttv button:first-of-type {
+  margin: 5px;
+
+  background-color: black;
+  color: white;
+}
+.smarttv button {
+  padding: 10px 20px;
+  border-radius: 10px;
+}

@@ -13,6 +13,7 @@ import xiaomipadcover from "./assets/Xiaomipadcover.webp";
 import flipcase from "./assets/flipcase.webp";
 import Tablet from "./components/Tablet";
 import Earbuds from "./components/Earbuds";
+import SmartTV from "./components/SmartTV";
 
 // i have to fetch data from api
 function App() {
@@ -52,6 +53,33 @@ function App() {
       price: "2,999",
     },
   ];
+  // here smarttvdata is an arrey collection of object
+  const smarttvdata = [
+    {
+      discount: "42% off",
+      name: "Xiaomi Smart TV A Pro 4K 43 (1.08m)",
+      price: "24,999 INR",
+      img: "https://i03.appmifile.com/209_item_in/20/09/2024/37664d8037bff9363179d5d07f68b2ec.jpg?thumb=1&w=300&f=webp&q=85",
+    },
+    {
+      discount: "",
+      name: "Xiaomi smart TV X  Series 2024 Edition",
+      price: "33,999 INR",
+      img: "https://i03.appmifile.com/287_item_in/04/09/2024/a3ec2c6f0833854a8ee1ee16855eb40e.png?thumb=1&w=300&f=webp&q=85",
+    },
+    {
+      discount: "",
+      name: "Xiaomi X Pro QLED  Series",
+      price: "69,999 INR",
+      img: "https://i03.appmifile.com/936_item_in/05/09/2024/75288be41a3cedb3c1a3a96763da3823.png?thumb=1&w=300&f=webp&q=85",
+    },
+    {
+      discount: "",
+      name: "Xiaomi smart TV X  Series 2024 Edition",
+      price: "28,999 INR",
+      img: "https://i03.appmifile.com/972_item_in/04/09/2024/06a3c151cefa8770a806f60432d9c573.png?thumb=1&w=300&f=webp&q=85",
+    },
+  ];
   return (
     <div className="App">
       <h1>welcome to my Website</h1>
@@ -75,6 +103,16 @@ function App() {
             img={currentearbuds.img}
             name={currentearbuds.name}
             price={currentearbuds.price}
+          />
+        ))}
+      </div>
+      <div className="container">
+        {smarttvdata.map((currentsmarttvs) => (
+          <SmartTV
+            discount={currentsmarttvs.discount}
+            name={currentsmarttvs.name}
+            price={currentsmarttvs.price}
+            img={currentsmarttvs.img}
           />
         ))}
       </div>
