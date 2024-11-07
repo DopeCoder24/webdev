@@ -1,7 +1,7 @@
 const Earbuds = (props) => {
   return (
     <div className="earbuds">
-      <p className="discount"></p>
+      <p className="discount"> 60% off</p>
       <h1>{props.name}</h1>
       <p className="price">{props.price}</p>
       <button>Buy Now</button>

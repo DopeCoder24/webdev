@@ -45,6 +45,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 50px auto;
 }
 .phone {
   margin: 20px 50px;
@@ -72,6 +73,7 @@
   font-size: small;
   position: relative;
   margin-bottom: 20px;
+  margin: 0 15px;
 }
 .tabBox img {
   width: 200px;
@@ -87,9 +89,17 @@
   text-align: center;
   width: 300px;
   height: 500px;
+  position: relative;
+  padding-top: 50px;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+  margin: 15px 10px;
+  border-radius: 10px;
 }
 .earbuds .price {
   font-size: 20px;
+}
+.earbuds .discount {
+  position: absolute;
 }
 .earbuds button:first-of-type {
   margin: 5px;
@@ -104,15 +114,21 @@
 .smarttv {
   text-align: center;
   width: 300px;
-  height: 500px;
+  margin-right: 20px;
   position: relative;
+  padding-top: 30px;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  /* background-color: orange; */
 }
 .smarttv p {
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 10px;
-  background-color: rgba(255, 128, 0, 0.5);
+  background-color: rgba(255, 128, 0, 0.4);
   color: rgb(255, 128, 0);
+  border: 1px solid rgb(255, 128, 0);
+  padding: 4px 5px;
 }
 .smarttv button:first-of-type {
   margin: 5px;
@@ -123,4 +139,35 @@
 .smarttv button {
   padding: 10px 20px;
   border-radius: 10px;
+}
+.appcontainer {
+  /* border: 1px dotted red; */
+}
+
+.scorecard {
+  border: 2px solid black;
+  display: block;
+  width: 500px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 200px;
+  position: relative;
+}
+.scorecard button {
+  background-color: rgb(176, 232, 214);
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin-right: 20px;
+  font-size: xx-large;
+}
+.scorecard .out {
+  background: red;
+}
+.scorecard p {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.hi {
+  margin-bottom: 20px;
 }
