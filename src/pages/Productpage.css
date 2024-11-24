@@ -1,0 +1,8 @@
+.Productspage button {
+  all: unset;
+  padding: 5px 10px;
+  background-color: red;
+  margin-right: 5px;
+  border-radius: 10px;
+  color: white;
+}

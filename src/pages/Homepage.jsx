@@ -1,117 +1,100 @@
-import Card from "../components/Card";
-import UserCard from "../components/UserCard";
-import Redmi13Pro from "../assets/redmiNote13pro.webp";
-import Redmi5G from "../assets/redmi5G.webp";
-import Xiaomi14Ultra from "../assets/Xiaomi14.webp";
-import Xiaomi14 from "../assets/xiaomi.webp";
 import Phone from "../components/Phone";
-import axios from "axios";
-import RedmiPadSE from "../assets/SEcover.webp";
-import xiaomipadcover from "../assets/Xiaomipadcover.webp";
-import flipcase from "../assets/flipcase.webp";
-import Tablet from "../components/Tablet";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSearch,
+  faCartShopping,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  phoneData,
+  EarBudsdata,
+  smarttvdata,
+  homephData,
+  offerData,
+  exploreData,
+} from "../data/data.js";
+// import axios from "axios";
+
+// import Tablet from "../components/Tablet";
 import Earbuds from "../components/Earbuds";
 import SmartTV from "../components/SmartTV";
+import { Link } from "react-router-dom/";
+import { NavLink } from "react-router-dom";
+import { text } from "@fortawesome/fontawesome-svg-core";
+import Homephone from "../components/Homephone.jsx";
+import Offer from "../components/Offer.jsx";
+import Explorepage from "../components/Explorepage.jsx";
+
 const Homepage = (props) => {
-  const phoneData = [
-    {
-      img: Redmi13Pro,
-      name: "Redmi Note 13 Pro  5G",
-      price: "22,999",
-    },
-    { img: Redmi5G, name: "Redmi Note 13 5G", price: "15,999" },
-    { img: Xiaomi14Ultra, name: "Xiaomi 14 Ultra", price: "99,999" },
-    { img: Xiaomi14, name: "Xiaomi 14", price: "59,999" },
-    { img: Redmi13Pro, name: "Redmi Note 13 Pro  5G", price: "22,999" },
-    { img: Redmi5G, name: "Redmi Note 13 5G", price: "15,999" },
-    { img: Xiaomi14Ultra, name: "Xiaomi 14 Ultra", price: "99,999" },
-    { img: Xiaomi14, name: "Xiaomi 14", price: "59,999" },
-  ];
-  const Tabletdata = [
-    { img: RedmiPadSE, name: "Redmi Pad SE Cover" },
-    { img: xiaomipadcover, name: "Xiaomi Pad 6 cover" },
-    { img: flipcase, name: "Flip Case for Redmi Pad" },
-  ];
-  const EarBudsdata = [
-    {
-      img: "https://i03.appmifile.com/626_item_in/18/07/2024/972df521d15b577474d3990fba0acf14.jpg?thumb=1&w=300&f=webp&q=85",
-      name: "Redmi Buds 5C",
-      price: "1,999",
-    },
-    {
-      img: "https://i03.appmifile.com/352_item_in/22/04/2024/10c158bab5315d96a721ec2e98c44abd.jpg?thumb=1&w=300&f=webp&q=85",
-      name: "Redmi Buds 5A",
-      price: "1,499",
-    },
-    {
-      img: "https://i03.appmifile.com/748_item_in/12/02/2024/b3b0f83bac220c0ec40a101fd3743e02.jpg?thumb=1&w=300&f=webp&q=85",
-      name: "Redmi Buds 5",
-      price: "2,999",
-    },
-  ];
   // here smarttvdata is an arrey collection of object
-  const smarttvdata = [
-    {
-      discount: "42% off",
-      name: "Xiaomi Smart TV A Pro 4K 43 (1.08m)",
-      price: "24,999 INR",
-      img: "https://i03.appmifile.com/209_item_in/20/09/2024/37664d8037bff9363179d5d07f68b2ec.jpg?thumb=1&w=300&f=webp&q=85",
-    },
-    {
-      discount: "32% off",
-      name: "Xiaomi smart TV X  Series 2024 Edition",
-      price: "33,999 INR",
-      img: "https://i03.appmifile.com/287_item_in/04/09/2024/a3ec2c6f0833854a8ee1ee16855eb40e.png?thumb=1&w=300&f=webp&q=85",
-    },
-    {
-      discount: "69% off",
-      name: "Xiaomi X Pro QLED  Series",
-      price: "69,999 INR",
-      img: "https://i03.appmifile.com/936_item_in/05/09/2024/75288be41a3cedb3c1a3a96763da3823.png?thumb=1&w=300&f=webp&q=85",
-    },
-    {
-      discount: "32% off",
-      name: "Xiaomi smart TV X  Series 2024 Edition",
-      price: "28,999 INR",
-      img: "https://i03.appmifile.com/972_item_in/04/09/2024/06a3c151cefa8770a806f60432d9c573.png?thumb=1&w=300&f=webp&q=85",
-    },
-  ];
+
   return (
     <div className="homepage">
-      <h1>This is HOMEPAGE</h1>
-      <h1>welcome to my Website</h1>
-      <div className="container">
-        {phoneData.map((currentphone) => (
-          <Phone
-            img={currentphone.img}
-            name={currentphone.name}
-            price={currentphone.price}
+      {/* <h1>This is HOMEPAGE</h1> */}
+      {/* <h1>welcome to my Website</h1> */}
+      {/* <div className="navbar">
+        <div className="left">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/2048px-Xiaomi_logo_%282021-%29.svg.png"
+            alt="logo"
           />
-        ))}
-      </div>
-      <div className="container">
-        {Tabletdata.map((currenttablet) => (
-          <Tablet img={currenttablet.img} name={currenttablet.name} />
-        ))}
-      </div>
-      <div className="container">
-        {EarBudsdata.map((currentearbuds) => (
-          <Earbuds
-            img={currentearbuds.img}
-            name={currentearbuds.name}
-            price={currentearbuds.price}
-          />
-        ))}
-      </div>
-      <div className="container">
-        {smarttvdata.map((currentsmarttvs) => (
-          <SmartTV
-            discount={currentsmarttvs.discount}
-            name={currentsmarttvs.name}
-            price={currentsmarttvs.price}
-            img={currentsmarttvs.img}
-          />
-        ))}
+          <NavLink to="/phones">Phones</NavLink>
+          <NavLink to="/earbuds">Smart Watch & Audio</NavLink>
+          <NavLink to="/smarttv">TV & Smart home</NavLink>
+        </div>
+        <div className="right">
+          <FontAwesomeIcon icon={faSearch} />
+          <FontAwesomeIcon icon={faCartShopping} />
+          <FontAwesomeIcon icon={faUser} />
+          {/* <FontAwesomeIcon icon="fas fa-shopping-cart" /> */}
+      {/* </div> */}
+      {/* </div> */}
+      <div className="homecontent">
+        <h1>Featured Products</h1>
+        <div className="white">
+          <div className="ph">
+            <img
+              src="https://i03.appmifile.com/771_operator_in/04/11/2024/78b882d5215b24cb5d28b2f6259a3b0f.png?thumb=1&w=660&f=webp&q=85"
+              alt=""
+            />
+            <div className="ph2">
+              <h1>Xiaomi 14 CIVI</h1>
+              <h3>Cinematic Vision</h3>
+            </div>
+          </div>
+
+          <div className="homeph">
+            {/*we are mapping homephData and giving to currentData function and rendering from homepage.jsx  */}
+            {homephData.map((currentData) => (
+              <Homephone
+                img={currentData.img}
+                name={currentData.name}
+                text={currentData.price}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="exclusive">
+          <h1>Exclusive Offers</h1>
+          <div className="ex">
+            {offerData.map((currentData) => (
+              <Offer
+                img={currentData.img}
+                title={currentData.title}
+                text={currentData.text}
+              />
+            ))}
+          </div>
+        </div>
+
+        <h1>Explore Xiaomi</h1>
+        <div className="explore">
+          <div className="exp">
+            {exploreData.map((currentData) => (
+              <Explorepage img={currentData.img} text={currentData.text} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
